@@ -21,4 +21,5 @@ class Movie {
         releasedate: json['release_date'],
        
       );
+
 }

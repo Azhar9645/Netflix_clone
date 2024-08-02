@@ -8,6 +8,7 @@ import 'package:netflix_clone/presentation/search/widgets/title.dart';
 const imagUel =
     'https://media.themoviedb.org/t/p/w1066_and_h600_bestv2/thLAoL6VeZGmCyDpCOeoxLvA8yS.jpg';
 
+// ignore: must_be_immutable
 class SearchIdleWidget extends StatelessWidget {
   List<Movie> data;
   SearchIdleWidget({super.key,required this.data});
@@ -35,6 +36,7 @@ class SearchIdleWidget extends StatelessWidget {
 }
 
 
+// ignore: must_be_immutable
 class TopSearchItemTile extends StatelessWidget {
   final Movie data;
    TopSearchItemTile({super.key,required this.data});

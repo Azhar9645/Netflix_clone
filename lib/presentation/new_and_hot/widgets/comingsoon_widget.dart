@@ -14,7 +14,7 @@ class ComingSoon_Widget extends StatelessWidget {
       children: [
         const SizedBox(
           width: 50,
-          height: 450,
+          height: 500,
           child: Column(
             children: [
               Text(

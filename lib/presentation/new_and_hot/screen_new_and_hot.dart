@@ -58,21 +58,32 @@ class _ScreenNewAndHotState extends State<ScreenNewAndHot> {
               )
             ],
             bottom: const TabBar(
-              isScrollable: true,
+              isScrollable: false,
+              dividerColor: Colors.transparent,
               unselectedLabelColor: kWhiteColor,
               unselectedLabelStyle:
                   TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               labelColor: Colors.black,
               labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               indicator: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(Radius.circular(30))),
-              tabs: [
-                Tab(
-                  text: "🍿 Coming Soon",
+                color: Colors.white,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(32),
                 ),
-                Tab(
-                  text: "👀 Everyone's Watching",
+              ),
+              labelPadding: const EdgeInsets.only(left: 10, right: 10),
+              tabs: [
+                Padding(
+                  padding: EdgeInsets.only(left: 15, right: 15),
+                  child: Tab(
+                    text: "🍿 Coming Soon",
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 15, right: 15),
+                  child: Tab(
+                    text: "👀 Everyone's Watching",
+                  ),
                 ),
               ],
             ),
@@ -89,15 +100,18 @@ class _ScreenNewAndHotState extends State<ScreenNewAndHot> {
   Widget _buildComingsoon() {
     return ListView.builder(
       itemCount: upcoming.length,
-      itemBuilder: (context, index) => ComingSoon_Widget(data:upcoming[index],),
+      itemBuilder: (context, index) => ComingSoon_Widget(
+        data: upcoming[index],
+      ),
     );
   }
 
   Widget _buildEveryonesWatching() {
-  return ListView.builder(
-    itemCount: nowPlaying.length,
-    itemBuilder: (context, index) =>  EveryonesWatching_Widget(data:nowPlaying[index],),
-    
-  );
-}
+    return ListView.builder(
+      itemCount: nowPlaying.length,
+      itemBuilder: (context, index) => EveryonesWatching_Widget(
+        data: nowPlaying[index],
+      ),
+    );
+  }
 }

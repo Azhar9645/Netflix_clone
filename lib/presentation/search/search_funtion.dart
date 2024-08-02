@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 
 Future<List<Movie>> searchfunction(String query) async {
-    const apiKey = '3f289ebadafa6f95104807f753f7d195';
+    const apiKey = '22c00e908dbff10456903a1f488b8085';
     const baseUrl = 'https://api.themoviedb.org/3/search/movie';
 
     int maxtries = 3;
